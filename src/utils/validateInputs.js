@@ -9,7 +9,7 @@ export const validateInputs = ({ taskDesc, taskTitle, dueDate }) => {
   }
 
   if (new Date(dueDate) < new Date()) {
-    return { isValid: false, msgText: "Due Date shold be greater than current date and time" };
+    return { isValid: false, msgText: "The due date should be later than the current date and time." };
   }
 
   return {isValid:true , msgText: 'Task added successfully'};
